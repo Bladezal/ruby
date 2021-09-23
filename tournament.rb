@@ -1,14 +1,18 @@
 require './team.rb'
 require './match.rb'
+require './logging.rb'
 class Tournament
+    include Logging
     attr_accessor :matches, :teams
     
     def initialize()
         @matches = []
         @teams = []
+        log("Initializing Tournament")
     end
 
     def possition_table
+        log("Final standings of Tournament.")
         @teams.each {|team| team.calc_difference}
         @teams = @teams.sort_by {|t| [t.total_poins, t.goals_difference]}.reverse
         puts "Final Tournament standings table:"

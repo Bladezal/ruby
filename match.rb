@@ -1,10 +1,13 @@
 require './team.rb'
+require './logging.rb'
 class Match
+include Logging
     def initialize(team_a, team_b, goals_team_a, goals_team_b)
         @team_a = team_a
         @team_b = team_b
         @goals_team_a = goals_team_a
         @goals_team_b = goals_team_b
+        log("Initializing Match #{team_a.name} X #{team_b.name}  Final Score: #{goals_team_b} - #{goals_team_a}",'DEBUG')
     end
     
     attr_accessor :team_a, :team_b, :goals_team_a, :goals_team_b
