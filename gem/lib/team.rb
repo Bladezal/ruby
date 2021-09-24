@@ -1,4 +1,4 @@
-require './logging.rb'
+require './gem/lib/logging.rb'
 class Team
     include Logging
     attr_accessor :name, :total_poins, :goals_against, :goals_difference, :goals_favor    

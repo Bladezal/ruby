@@ -1,5 +1,5 @@
-require './team.rb'
-require './logging.rb'
+require './gem/lib/team.rb'
+require './gem/lib/logging.rb'
 class Match
 include Logging
     def initialize(team_a, team_b, goals_team_a, goals_team_b)
