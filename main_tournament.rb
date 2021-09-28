@@ -1,7 +1,7 @@
-require 'tournament_libzal'
+require 'tournament'
 
 teams = ['A', 'B', 'C', 'D']
-tournament = Tournament.new()
+tournament = Tournament::Tournament.new()
 
 teams.each {|t| tournament.add_team(t)}
 
