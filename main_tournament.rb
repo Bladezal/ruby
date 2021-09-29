@@ -14,4 +14,4 @@ matches.each {|m| tournament.add_match(tournament.teams[tournament.teams.index {
                                        m["goals_team_b"])}
 
 tournament.matches.each {|m| m.calc_points}
-tournament.possition_table 
+tournament.possition_table
